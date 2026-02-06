@@ -2,6 +2,25 @@
 
 A Python agent powered by **Google Gemini** & **Google ADK** that queries BigQuery data using natural language. Sign in with Google, pick any project you have access to, and start querying — no pre-configuration needed.
 
+But first, some pre-configuration. ;-) Do you have an OAuth Client ID created yet in Google Cloud Console? If not, here's exactly what to set up:
+
+Go to console.cloud.google.com/apis/credentials
+Create Credentials → OAuth client ID
+Application type: Web application
+Under Authorized JavaScript origins, add:
+
+http://localhost:8000
+http://localhost
+
+
+Under Authorized redirect URIs, add:
+
+http://localhost:8000
+
+
+Copy the Client ID (looks like 123456789-xxxxx.apps.googleusercontent.com)
+Paste it into static/index.html replacing __YOUR_OAUTH_CLIENT_ID__
+
 ## Features
 
 - 🔐 **Google OAuth Login** — Sign in via browser, access any project in your account
